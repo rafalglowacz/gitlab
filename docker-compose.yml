@@ -5,10 +5,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    hostname: gitlab.test
+#    hostname: gitlab.test
     environment:
+#      external_url was gitlab.test before, but the runner doesn't see that hostname
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'http://gitlab.test:88'
+        external_url 'http://192.168.0.199:88' 
         gitlab_rails['gitlab_shell_ssh_port'] = 2224
         gitlab_rails['display_initial_root_password'] = true
         gitlab_rails['initial_root_password'] = 'secretsecret'
