@@ -1,2 +1,4 @@
 gitlabUrl: http://192.168.0.199:88
 runnerRegistrationToken: xxxxxxxxxxxxxx
+rbac:
+  create: true
